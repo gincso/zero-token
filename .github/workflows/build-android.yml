@@ -23,13 +23,12 @@ jobs:
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
-        with:
-          api-level: 36
-          build-tools: 36.0.0
-          ndk: 27.0.12077973
 
-      - name: Create local.properties
-        run: echo "sdk.dir=$ANDROID_HOME" > apps/android/local.properties
+      - name: Install Android SDK components
+        run: |
+          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --sdk_root=$ANDROID_HOME \
+            "platforms;android-36" \
+            "build-tools;36.0.0"
 
       - name: Grant gradlew permission
         run: chmod +x apps/android/gradlew
