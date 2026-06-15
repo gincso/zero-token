@@ -6,7 +6,7 @@ import kotlin.math.min
 internal class StreamingMediaDataSource : MediaDataSource() {
   private data class Chunk(val start: Long, val data: ByteArray)
 
-  @Suppress("DEPRECATION") private val lock = Object()
+  private val lock = java.lang.Object()
   private val chunks = ArrayList<Chunk>()
   private var totalSize: Long = 0
   private var closed = false
