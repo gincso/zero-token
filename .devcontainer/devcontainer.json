@@ -1,0 +1,17 @@
+{
+  "name": "OpenClaw Android Builder",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["vscjava.vscode-java-pack", "fwcd.kotlin", "naco-siren.gradle-language"]
+    }
+  },
+  "containerEnv": {
+    "ANDROID_HOME": "/usr/lib/android-sdk",
+    "ANDROID_SDK_ROOT": "/usr/lib/android-sdk"
+  },
+  "postCreateCommand": "echo '✅ Ready! Build APK with: cd apps/android && ./gradlew :app:assembleDebug'",
+  "remoteUser": "vscode"
+}
