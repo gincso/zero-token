@@ -467,7 +467,7 @@ class GatewayDiscovery(
     for (r in records) {
       val strings: List<String> =
         try {
-          r.strings.mapNotNull { it as? String }
+          r.strings
         } catch (_: Throwable) {
           emptyList()
         }
