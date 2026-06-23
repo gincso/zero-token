@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "default": "deepseek-v4-flash-free",
+  "provider": "openai",
+  "baseUrl": "https://api.openai.com/v1",
+  "models": [
+    { "id": "deepseek-v4-flash-free", "name": "deepseek-v4-flash-free", "tier": "free" },
+    { "id": "gpt-4o-mini", "name": "gpt-4o-mini", "tier": "free" },
+    { "id": "o4-mini", "name": "o4-mini", "tier": "free" }
+  ]
+}
